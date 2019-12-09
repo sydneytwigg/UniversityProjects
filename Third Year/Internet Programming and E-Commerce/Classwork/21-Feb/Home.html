@@ -1,0 +1,66 @@
+<html>
+
+  <head>
+    <script>
+      function validate() {
+        var name = document.getElementById('name');
+        if (name.value.length == 0) {
+          alert("Enter name");
+          return false;
+        } else {
+          return validateSurname();
+        }
+      }
+
+
+      function validateSurname() {
+        var surname = document.getElementById('surname');
+        if (surname.value.length == 0) {
+          alert("Enter surname");
+          return false;
+        } else {
+          return validateAge();
+        }
+      }
+
+      function validateAge() {
+        var age = document.getElementById('age');
+        //  alert("Test");
+        if (age.value.length == 0 && age.value < 16) {
+          alert("Invalid age");
+          return false;
+        } else {
+          return validateEmail();
+        }
+      }
+
+      function validateEmail() {
+        //alert("test");
+        var email = document.getElementById('email');
+        var mailFormat = /^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$/;
+        if (email.value.match(mailFormat)) {
+          return true;
+        } else {
+          alert("Invalid email");
+          return false;
+        }
+      }
+    </script>
+  </head>
+
+  <body>
+    <form method="post" action="/enter.php" onsubmit="return validate()">
+      <br> Name:
+      <input type="text" name="name" id="name"><br>
+      <br> Surname:
+      <input type="text" name="surname" id="surname"><br>
+      <br> Age:
+      <input type="text" name="age" id="age"><br>
+      <br> Email:
+      <input type="text" name="email" id="email"><br>
+      <br>
+      <button type="submit" value="submit"> Submit </button>
+    </form>
+  </body>
+
+</html>

@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+
+<html>
+
+<head>
+  <title>Form Revision</title>
+  <meta name="author" content="Sydney Twigg">
+
+  <script>
+    function submit() {
+      alert(hi);
+      var fullname = document.getElementById('fname').value + " " + document.getElementById('sname').value;
+      alert("Full name: " + fullname);
+      return fullname;
+    }
+  </script>
+</head>
+
+<body>
+  <form method="post" onsubmit="return submit()">
+    <fieldset>
+      <legend>Personal Information</legend>
+      <table style="width:30%">
+        <tr>
+          <td>Name</td>
+          <td><input type="text" name="name" id="fname"></td>
+        </tr>
+        <tr>
+          <td>Surname</td>
+          <td><input type="text" name="surname" id="sname"></td>
+        </tr>
+        <tr>
+          <td>ID</td>
+          <td><input type="text" name="id" id="id"></td>
+        </tr>
+        <tr>
+          <td>Gender</td>
+          <td><input type="radio" name="gender" value="Female">Female</input>
+            <input type="radio" name="gender" value="Male">Male</input>
+          </td>
+        </tr>
+      </table>
+    </fieldset>
+    <fieldset>
+      <legend>Contact Details</legend>
+      <table style="width:30%">
+        <tr>
+          <td>Phone Number</td>
+          <td><input type="text" name="phone" id="phone"></td>
+        </tr>
+        <tr>
+          <td>Email</td>
+          <td><input type="text" name="email" id="email"></td>
+        </tr>
+        <tr>
+          <td>Address Line 1</td>
+          <td><input type="text" name="address1" id="add1"></td>
+        </tr>
+        <tr>
+          <td>Address Line 2</td>
+
+          <td><input type="text" name="address2" id="add2"></td>
+        </tr>
+        <tr>
+          <td>Post Code</td>
+          <td><input type="text" name="postcode" id="postcode"></td>
+        </tr>
+        <tr>
+          <td>Province</td>
+          <td><select name="province">
+            <option value="KZN">KZN</option>
+            <option value="WC">WC</option>
+            <option value="EC">EC</option>
+            <option value="NC">NC</option>
+            <option value="MP">MP</option>
+            <option value="FS">FS</option>
+            <option value="GP">GP</option>
+            <option value="LP">LP</option>
+          </td>
+        </tr>
+      </table>
+    </fieldset>
+    <fieldset>
+      <legend>Modules</legend>
+      <input type="checkbox" name="module" value="ITEC">ITEC</value>
+      <br><input type="checkbox" name="module" value="ITOO">ITOO</value>
+      <br><input type="checkbox" name="module" value="ITSC">ITSC</value>
+      <br><input type="checkbox" name="module" value="ITDA">ITDA</value>
+    </fieldset>
+    <input type="submit" name="submit" id="submit">    
+    <input type="reset">
+  </form>
+</body>
+
+</html>

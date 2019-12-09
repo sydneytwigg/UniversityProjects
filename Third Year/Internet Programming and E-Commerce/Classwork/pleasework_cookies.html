@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+
+<html>
+
+  <head>
+    <title>JavaScript Cookies</title>
+    <script>
+      function writeCookie() {
+        if (document.getElementById('customer').value == "") {
+          alert("Enter value");
+          return ();
+        }
+
+        var cookieValue = escape(document.getElementById('customer').value);
+        var currentDate = new Date();
+        currentDate.setTime(currentDate.getTime() + (30 * 24 * 60 * 60 * 1000));
+        var expires = currentDate.toGMTString();
+        var value = expires;
+        document.cookie = cookieValue + "=" + value + "l" + expires;
+        alert("Cookie: " + cookieValue + " set. It will expire on: " + expires);
+      }
+
+      function readCookie() {
+        var counter = 1;
+        var allCookies = document.cookie;
+        cookieArray = allCookies.split(";");
+        for (var i = 0; i < cookieArray.length; i++) {
+          var name = cookieArray[i].split("=")[0];
+          var value = cookieArray[i].split("=")[1];
+
+          document.write("Cookie No." + counter + "->");
+          document.write("Name: " + name + " Expire on: " + value + "<br>");
+        }
+      }
+
+      function deleteCookie() {
+        if (document.getElementById('delcustomer').value == 0) {
+          alert("Enter value");
+          return ();
+        }
+        var cookieValue = escape(document.getElementById('customer').value);
+        var currentDate = new Date();
+        currentDate.setTime(currentDate.getTime() - (30 * 24 * 60 * 60 * 1000));
+        var expires = currentDate.toGMTString();
+        var value = expires;
+        document.cookie = cookieValue + "=" + value + "l" + expires;
+        alert("Cookie: " + cookieValue + " set. It will expire on: " + expires);
+      }
+    </script>
+  </head>
+
+  <body>
+    <form method="post">
+      Enter name:
+      <input type="text" name="customer" id="customer">
+      <input type="button" value="Set Cookie" onClick="writeCookie()">
+      <br>
+      <br>
+      <input type="button" value="Get Cookie" onClick="readCookie()">
+      <br>
+      <br> Enter name of cookie to delete:
+      <input type="text" name="customer" id="delcustomer">
+      <input type="button" value="Delete Cookie" onClick="deleteCookie()">
+
+    </form>
+  </body>
+
+</html>

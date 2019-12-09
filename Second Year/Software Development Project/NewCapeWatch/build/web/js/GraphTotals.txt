@@ -1,0 +1,6 @@
+crimes=254
+morning=43
+noon=18
+evening=163
+night=30
+

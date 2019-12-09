@@ -1,0 +1,19 @@
+
+<Page loaded="pageLoaded" class="page" actionBarHidden="false" xmlns="http://www.nativescript.org/tns.xsd">
+  <ActionBar class="action-bar">
+    <Label class="action-bar-title h3" text="Share Shopping List"></Label>
+
+  </ActionBar>
+  <ScrollView class="contents">
+    <StackLayout class="body">
+      <Label text=" "/>
+      <Label text="Share your shopping list via email." class="text-muted" />
+      <Label text=" "/>
+      <StackLayout >
+        <TextField  class="segmented-bar h3" text="{{ password }}" hint="Email address" secure="false" />
+        <Label class="hr-light"/>
+      </StackLayout>
+      <Button class="btn btn-primary btn-rounded-lg btn-layout-mp" text="Send" tap="send"/>
+    </StackLayout>
+  </ScrollView>
+</Page>

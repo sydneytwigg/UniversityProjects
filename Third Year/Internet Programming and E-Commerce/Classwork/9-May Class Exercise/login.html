@@ -1,0 +1,54 @@
+<html>
+
+  <head>
+    <title>Login</title>
+    <link rel="stylesheet" href="css/style.css">
+    <script>
+      function valid() {
+        var username = document.getElementById('username');
+        if (username.value.length == 0) {
+          alert("Enter username");
+          return false;
+        } else {
+          return validatePW();
+        }
+      }
+
+      function validatePW() {
+        var password = document.getElementById('password');
+        if (password.value.length == 0) {
+          alert("Enter password");
+          return false;
+        } else {
+          return true();
+        }
+      }
+    </script>
+  </head>
+
+  <body>
+    <h1>Login to your account</h1>
+    <form method="post" action="login.php" onsubmit="return valid()">
+      <table>
+        <tr>
+          <td>Username</td>
+          <td><input type="text" name="username" id="username" required></input>
+          </td>
+        </tr>
+        <tr>
+          <td>Password</td>
+          <td><input type="password" name="password" id="password" required></input>
+          </td>
+        </tr>
+        <tr>
+          <td><input type="submit" name=submit value="Submit"></input>
+          </td>
+          <td><button type="reset" name=reset>Reset</button></td>
+        </tr>
+      </table>
+    </form>
+
+    <a href="registration.html">Register for an account</a>
+  </body>
+
+</html>

@@ -1,0 +1,71 @@
+<html>
+
+  <head>
+    <title>JavaScript Revision</title>
+    <script>
+      function validate() {
+        var name document.getElementById('name');
+        if (name.value.length == 0) {
+          alert("Enter name");
+          return false;
+        } else {
+          return validateSurname();
+        }
+      }
+
+      function validateSurname() {
+        if (name.value.length == 0) {
+          alert("Enter surname");
+          return true;
+        } else {
+          return false;
+        }
+      }
+    </script>
+  </head>
+
+
+  <body>
+    <form method="POST" action="/enter.php" onsubmit="return validate()">
+      <table>
+        <tr>
+          <td>
+            Name:
+          </td>
+          <td>
+            <input type="text" name="name" id="name">
+        </tr>
+        <tr>
+          <td>
+            Surname:
+          </td>
+          <td>
+            <input type="text" name="surname" id="surname">
+        </tr>
+        <tr>
+          <td>
+            Age:
+          </td>
+          <td>
+            <input type="text" name="age" id="age">
+        </tr>
+        <tr>
+          <td>
+            Gender:
+          </td>
+          <td>
+            <input type="radio" name="gender" id="male">Male</input>
+            <input type="radio" name="gender" id="female">Female</input>
+          </td>
+        </tr>
+        <tr>
+          <td>
+            <button type="submit" value="submit">Submit</button>
+          </td>
+        </tr>
+    </form>
+
+    </table>
+  </body>
+
+</html>

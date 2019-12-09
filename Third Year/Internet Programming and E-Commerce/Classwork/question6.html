@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <title>Question 6 ITEC Semester Test</title>
+  <meta name="author" content="Sydney Twigg">
+
+  <script>
+    function add() {
+      var numb1 = parseInt(document.getElementById('num1').value);
+      var numb2 = parseInt(document.getElementById('num2').value);
+      var ans = numb1 + numb2;
+      alert("The sum of " + numb1 + " and " + numb2 + " is " + ans);
+      return ans;
+    }
+  </script>
+</head>
+
+<body>
+  <h1>Calculator</h1>
+  <form method="post" onsubmit="return add()">
+    <table style="width:40%">
+      <tr>
+        <td>First number</td>
+        <td><input type="text" name="num1" id="num1"></td>
+      </tr>
+      <tr>
+        <td>Second number</td>
+        <td><input type="text" name="num2" id="num2"></td>
+      </tr>
+      <tr>
+        <td><input type="submit" name="Add" id="submit"></td>
+        <td><input type="reset"></td>
+      </tr>
+    </table>
+  </form>
+</body>
+
+
+</html>

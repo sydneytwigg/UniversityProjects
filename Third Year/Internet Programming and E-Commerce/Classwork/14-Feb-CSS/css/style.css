@@ -1,0 +1,16 @@
+body{
+  background-color: #F2F2F2;
+  font-family: 'Roboto', sans-serif;
+}
+
+h1{
+  font-weight: 200;
+  font-size: 40px;
+}
+
+.fancy{
+    color: #80f442;
+    font-style: oblique;
+    font-size: 300%;
+    text-align: center;
+}

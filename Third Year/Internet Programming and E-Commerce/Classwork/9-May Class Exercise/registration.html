@@ -1,0 +1,84 @@
+<html>
+
+  <head>
+    <title>Login</title>
+    <link rel="stylesheet" href="css/style.css">
+    <script>
+      function valid() {
+        var name = document.getElementById('name');
+        if (name.value.length == 0) {
+          alert("Enter name");
+          return false;
+        } else {
+          return validateSurname();
+        }
+      }
+
+      function validateSurname() {
+        var surname = document.getElementById('surname');
+        if (surname.value.length == 0) {
+          alert("Enter surname");
+          return false;
+        } else {
+          return validateID();
+        }
+      }
+
+      function validateID() {
+        var id = document.getElementById('id');
+        if (id.value.length == 0) {
+          alert("Enter ID");
+          return false;
+        } else {
+          return validateCredit();
+        }
+      }
+
+      function validateCredit() {
+        var credit = document.getElementById('credit');
+        if (credit.value.length == 0) {
+          alert("Enter credit limit");
+          return false;
+        } else {
+          return true;
+        }
+      }
+    </script>
+  </head>
+
+  <body>
+    <h1>Register for an account</h1>
+    <form method="post" action="/index.php" onsubmit="return valid()">
+      <table>
+        <tr>
+          <td>Name</td>
+          <td><input type="text" name="name" id="name" required></input>
+          </td>
+        </tr>
+        <tr>
+          <td>Surname</td>
+          <td><input type="text" name="surname" id="surname" required></input>
+          </td>
+        </tr>
+        <tr>
+          <td>ID Number</td>
+          <td><input type="text" name="id" id="id" required></input>
+          </td>
+        </tr>
+        <tr>
+          <td>Credit Limit</td>
+          <td><input type="text" name="credit" id="credit" required></input>
+          </td>
+        </tr>
+        <tr>
+          <td><input type="submit" name=submit value="Submit"></input>
+          </td>
+          <td><button type="reset" name=reset>Reset</button></td>
+        </tr>
+      </table>
+    </form>
+
+    <a href="login.php">Login to an existing account</a>
+  </body>
+
+</html>
